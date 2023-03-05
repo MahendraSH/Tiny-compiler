@@ -1,4 +1,7 @@
-# Tiny-compiler
+# Tiny compiler
+----
+## Compiler build on top of C compiler using C language.<br />
+## BOOK : Compiler Construction: Principles and Practice - Kenneth C. Louden 
 scanner and parser for tiny lang
 ### tiny scanner using c language
 -----
