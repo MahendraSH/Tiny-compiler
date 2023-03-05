@@ -49,9 +49,9 @@ FILE *listing;
 FILE *code;
 
 int lineno = 0;
-int EchoSource = FALSE;
+int EchoSource = TRUE;
 static int EOF_flag = FALSE;
-int TraceScan = FALSE;
+int TraceScan = TRUE;
 
 TokenType getToken(void);
 
@@ -169,7 +169,6 @@ void printToken(TokenType token, const char *tokenString)
 void main()
 {
     char pgm[20]="SAMPLE.TNY";
-
     source = fopen(pgm, "r");
     if (source == NULL)
     {
@@ -183,13 +182,10 @@ void main()
 }
 
 TokenType getToken(void)
-{ /* index for storing into tokenString */
+{ 
     int tokenStringIndex = 0;
-    /* holds current token to be returned */
     TokenType currentToken;
-    /* current state - always begins at START */
     StateType state = START;
-    /* flag to indicate save to tokenString */
     int save;
     while (state != DONE)
     {
