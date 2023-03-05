@@ -1,6 +1,6 @@
 # Tiny-compiler
 scanner and parser for tiny lang
-### tiny scanner using c progaming
+### tiny scanner using c language
 -----
 -----
 ####Sample program
