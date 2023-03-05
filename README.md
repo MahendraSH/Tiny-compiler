@@ -1,8 +1,10 @@
 # Tiny-compiler
 scanner and parser for tiny lang
 ### tiny scanner using c progaming
-
+-----
+-----
 ####Sample program
+```
 { Sample program
   in TINY language -
   computes factorial
@@ -16,7 +18,10 @@ if 0 < x then { don't compute if x <= 0 }
   until x = 0;
   write fact  { output factorial of x }
 end
+```
+---------
 #### output:
+```
 TINY COMPILATION: SAMPLE.TNY
    1: { Sample program
    2:   in TINY language -
@@ -46,3 +51,4 @@ TINY COMPILATION: SAMPLE.TNY
   13: end
         13: reserved word: end
         14: EOF
+        ```
