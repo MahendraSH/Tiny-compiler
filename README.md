@@ -6,7 +6,7 @@ scanner and parser for tiny lang
 ### tiny scanner using c language
 -----
 -----
-####Sample program
+#### Sample program
 ```
 { Sample program
   in TINY language -
