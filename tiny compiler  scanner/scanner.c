@@ -165,7 +165,7 @@ void printToken(TokenType token, const char *tokenString)
     }
 }
 
-
+// main function
 void main()
 {
     char pgm[20]="SAMPLE.TNY";
