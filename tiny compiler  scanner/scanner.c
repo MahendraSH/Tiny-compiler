@@ -160,12 +160,11 @@ void printToken(TokenType token, const char *tokenString)
         fprintf(listing,
                 "ERROR: %s\n", tokenString);
         break;
-    default: /* should never happen */
+    default: 
         fprintf(listing, "Unknown token: %d\n", token);
     }
 }
 
-// main function
 void main()
 {
     char pgm[20]="SAMPLE.TNY";
@@ -264,7 +263,7 @@ TokenType getToken(void)
             if (c == '=')
                 currentToken = ASSIGN;
             else
-            { /* backup in the input */
+            {
                 ungetNextChar();
                 save = FALSE;
                 currentToken = ERROR;
@@ -272,7 +271,7 @@ TokenType getToken(void)
             break;
         case INNUM:
             if (!isdigit(c))
-            { /* backup in the input */
+            { 
                 ungetNextChar();
                 save = FALSE;
                 state = DONE;
@@ -281,7 +280,7 @@ TokenType getToken(void)
             break;
         case INID:
             if (!isalpha(c))
-            { /* backup in the input */
+            { 
                 ungetNextChar();
                 save = FALSE;
                 state = DONE;
@@ -289,7 +288,7 @@ TokenType getToken(void)
             }
             break;
         case DONE:
-        default: /* should never happen */
+        default: 
             fprintf(listing, "Scanner Bug: state= %d\n", state);
             state = DONE;
             currentToken = ERROR;
@@ -310,4 +309,4 @@ TokenType getToken(void)
         printToken(currentToken, tokenString);
     }
     return currentToken;
-} /* end getToken */
+} 
