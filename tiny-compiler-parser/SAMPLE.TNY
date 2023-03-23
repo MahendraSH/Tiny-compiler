@@ -1,0 +1,9 @@
+{ Sample program
+  in TINY language -
+  computes add two numbers
+}
+read x; { input an integer }
+read y;
+sum := x + y;
+write sum
+end
