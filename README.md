@@ -55,3 +55,88 @@ TINY COMPILATION: SAMPLE.TNY
         13: reserved word: end
         14: EOF
         ```
+----------------------------------------------------------------
+----------------------------------------------------------------
+### tiny Parser using c language
+
+####  Sample program 1 
+
+```
+{ Sample program
+  in TINY language -
+  computes add two numbers
+}
+read x; { input an integer }
+read y;
+sum := x + y;
+write sum
+
+
+```
+----------------------------------------------------------------
+#### output:
+```TINY COMPILATION: SAMPLE.TNY
+   1: { Sample program
+   2:   in TINY language -
+   3:   computes add two numbers
+   4: }
+   5: read x; { input an integer }
+   6: read y;
+   7: sum := x + y;
+   8: write sum
+   9:
+
+Syntax tree:
+  Read: x
+  Read: y
+  Assign to: sum
+    Op: +
+      Id: x
+      Id: y
+  Write
+    Id: sum
+
+```
+----------------------------------------------------------------
+----------------------------------------------------------------
+#### Sample program 2
+```
+{ Sample program
+  in TINY language -
+  computes add two numbers
+}
+read x; { input an integer }
+read y;
+sum := x + y;
+write sum
+end 
+```
+----------------------------------------------------------------
+#### output :
+
+```
+
+TINY COMPILATION: SAMPLE.TNY
+   1: { Sample program
+   2:   in TINY language -
+   3:   computes add two numbers
+   4: }
+   5: read x; { input an integer }
+   6: read y;
+   7: sum := x + y;
+   8: write sum
+   9: end
+
+>>> Syntax error at line 9: Code ends before file
+
+Syntax tree:
+  Read: x
+  Read: y
+  Assign to: sum
+    Op: +
+      Id: x
+      Id: y
+  Write
+    Id: sum
+
+```
