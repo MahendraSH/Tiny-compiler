@@ -6,3 +6,4 @@ read x; { input an integer }
 read y;
 sum := x + y;
 write sum
+end
